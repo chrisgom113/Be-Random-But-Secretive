@@ -1,20 +1,20 @@
 
-
-
+// Create HTML reference for 'Generate Button'
 var generateBtn = document.querySelector("#generate");
 
-
+// Add code to make clicking event run main function ----------------------------------------------------------------------------
 generateBtn.addEventListener("click", createPassword);
 
+// Main script function that includes criteria prompts and subsequent password generation ---------------------------------------
 
 function createPassword() {
 
-  // Prompt user to input character length
+  // User prompt to input character length --------------------------------------------------------------
+
   var chooseLength = prompt("How many characters? (Enter value between 8-128)");
 
   if (chooseLength === null) {
-    console.log(chooseLength);
-    return;
+        return;
 
 
   } else if (chooseLength === "") {
@@ -28,12 +28,11 @@ function createPassword() {
     createPassword();
 
   } else if (chooseLength >= 8 && chooseLength <= 128) {
-    console.log(chooseLength);
-    window.alert("Thank you. Your password will be a length of " + chooseLength + " characters.");
+    window.alert("Thank you. Your password have be a length of " + chooseLength + " characters.");
 
-  }
+  } 
 
-  // Prompt user to select character type---------------------------------------------------------------
+  // Prompt user to select character type-------------------------------------------------------------------------------------------
 
 
   var characterType = prompt("Select a character type: (Please pick one) 'uppercase', 'lowercase', 'numeric', or 'special'.");
@@ -53,18 +52,21 @@ function createPassword() {
     (characterType == "lowercase") ||
     (characterType == "numeric") ||
     (characterType == "special")) {
-    confirm("Awesome! Your password will use " + characterType + " characters. Click 'OK' to see your password");
+    confirm("Awesome! Your password will use " + characterType + " characters. Click 'OK' to get your password");
 
   }
+
+  // Declare the function provided in the starter code and setup the objects, for loop, and 'Math.random' operator -------------------
 
   function generatePassword() {
     var setCharacters = {
       lowercase: "abcdefghijklmnopqrstuvwxy",
       uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
       numeric: "0123456789",
-      special: " !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+      special: " !$%&'()*+,-./:;<=>?@[\]^_`{|}~"
 
     };
+
     var setCharacters = setCharacters[characterType.toLowerCase()] || setCharacters.lowercase;
     var newPassword = "";
     for (var i = 0; i < chooseLength; i++) {
@@ -72,13 +74,15 @@ function createPassword() {
     }
     return newPassword;
   }
+
+  // Create variables that will call function
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
+  // Operator will call function
   passwordText.value = password;
 
 }
-  
 
 
 
@@ -90,4 +94,4 @@ function createPassword() {
 
 
 
-  
+
