@@ -5,6 +5,10 @@ var generateBtn = document.querySelector("#generate");
 // Add code to make clicking event run main function ----------------------------------------------------------------------------
 generateBtn.addEventListener("click", createPassword);
 
+// Instruct user in order to increase fluidity of navigating
+
+window.alert("When the page loads, click the 'Generate Password' button to get started!");
+
 // Main script function that includes criteria prompts and subsequent password generation ---------------------------------------
 
 function createPassword() {
