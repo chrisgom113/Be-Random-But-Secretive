@@ -32,7 +32,7 @@ function createPassword() {
     createPassword();
 
   } else if (chooseLength >= 8 && chooseLength <= 128) {
-    window.alert("Thank you. Your password will be " + chooseLength + " characters.");
+    window.alert("Thank you. Your password will have " + chooseLength + " characters.");
 
   } 
 
