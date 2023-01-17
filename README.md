@@ -1,22 +1,27 @@
-# 03 JavaScript: Password Generator
+# Be-Random-But-Secretive
 
-## Your Task
+## Description
 
-This week's Challenge requires you to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
+As with the rest of the class, I was provided with starter code that included html, css, and javascript files. The task was to both debug AND generate the needed code required to complete the functionality of the "random password generator" wihin the parameters of the Acceptance Criteria that fufills the User Story.
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of password special characters](https://www.owasp.org/index.php/Password_special_characters) from the OWASP Foundation.
+This task required me to take an extreme and tumultous deep dive into the foundations of Javascript language, incorporating the points and data that were acquired during lectures, as well as using the resources available in developer.mozilla.org (and various other Google-related sites). Simply put, this was NOT an easy task. 
 
-## User Story
+To make this thing work, it required meticulous creation of if/else logical conditions, 'var' creations with various nested levels of use, and very 'meta' function delcaration and var expressions to achieve the final result. To add to this, window prompts were required in order to collect data while also creating an interactive experience from the user. Specific code was needed to incorporate the user's data inputs into the final result.
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+The biggest takeaway from this is that when developing Javascript files, there are a few major points that need to be consistently paid attention to:
 
-## Acceptance Criteria
+1. Always test your code as you go. You don't want to end up with 100 lines of code that is riddled with errors in syntax, improper language use, or anything else that prevents you from getting it right. Much better to test each new line or function in the console before moving on. This is crucial
 
-```
+2. The order of objects, functions, moderators, etc. matters a LOT. I learned how to be careful with where and "when" I place lines of code.
+
+and finally....
+
+3. Commit!  I wasn't able to revert back to previous versions of my code after going down rabbit holes of trying this or that. Reverting to earlier versions would through consistent and descriptive commits would have saved me a lot of time!
+
+In the end, although it wasn't explicit within the acceptance criteria that the HTML and/or CSS code needed to be changed or enhanced, I still went ahead and messed with the coloring for my own personal preference. THe page is essentiallyu 99% of what the CSS was before in the layout and styling. I just added a few colors.
+
+See Acceptance Criteria below for details:
+
 GIVEN I need a new, secure password
 WHEN I click the button to generate a password
 THEN I am presented with a series of prompts for password criteria
@@ -32,69 +37,40 @@ WHEN all prompts are answered
 THEN a password is generated that matches the selected criteria
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
-```
 
-## Mock-Up
+## Table of Contents
 
-The following image shows the web application's appearance and functionality:
+N/A
 
-![The Password Generator application displays a red button to "Generate Password".](./Assets/03-javascript-homework-demo.png)
+## Installation
 
-## Grading Requirements
+N/A
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+## Usage
 
-This Challenge is graded based on the following criteria: 
+Use the URL link provided below to access the web application with the password generator:
 
-### Technical Acceptance Criteria: 40%
+URL:
 
-* Satisfies all of the preceding acceptance criteria.
+Below are a few screenshots demonstrating the look and functionality of the web application:
 
-### Deployment: 32%
 
-* Application deployed at live URL.
+Before anything happens, the user sees this once URL is used to acces the web app.
 
-* Application loads with no errors.
+![Before anything happens, the user sees this once URL is used to acces the web app.](./Assets/Landing%20View.png)
 
-* Application GitHub URL submitted.
+An example of the interactive window prompts designed to extract information from the user based on their preference.
 
-* GitHub repository that contains application code.
+![An example of the interactive window prompts designed to extract information from the user based on their preference.](./Assets/window%20prompts.png)
 
-### Application Quality: 15%
+A peek at the final product!
 
-* Application user experience is intuitive and easy to navigate.
+![A peek at the final product!](./Assets/password%20generated.png)
 
-* Application user interface style is clean and polished.
+## Credits
 
-* Application resembles the mock-up functionality provided in the Challenge instructions.
+N/A
 
-### Repository Quality: 13%
+## License
 
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
-- - -
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+None
