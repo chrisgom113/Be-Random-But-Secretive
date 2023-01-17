@@ -40,7 +40,7 @@ function writePassword() {
     window.alert("Darn! You'll have to start from the beginning again");
     return;
   }
-  
+
   letterCasing = letterCasing.toUpperCase();
 
   if (letterCasing === "") {
@@ -55,7 +55,25 @@ function writePassword() {
     window.alert("Thank you. Your password will contain both upper and lower case characters.");
   }
 
+  // Logical Conditions for Numeric Character Inputs
+
   var numeric = window.prompt("Do you want numbers in your password? Enter 'Y' or 'N'")
+
+  if (numeric === null) {
+    window.alert("Darn! You'll have to start from the beginning again");
+    return;
+  }
+
+  numeric = numeric.toUpperCase();
+
+  if (numeric == "Y") {
+    window.alert("Awesome! Your password will include numbers");
+
+  } else if (numeric == "N") {
+    window.alert("No worries. Your password won't have any numbers");
+  }
+
+  // 
 
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
