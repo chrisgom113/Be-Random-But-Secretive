@@ -1,10 +1,4 @@
-var setCharacters = {
-  LOWERCASE: "abcdefghijklmnopqrstuvwxy",
-  UPPERCASE: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-  NUMERIC: "0123456789",
-  SPECIAL: " !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
 
-};
 
 
 var generateBtn = document.querySelector("#generate");
@@ -53,23 +47,28 @@ function createPassword() {
   } else if (characterType === "") {
     window.alert("You must enter a value! Please try again");
     prompt("Select a character type: (Please pick one) 'uppercase', 'lowercase', 'numeric', or 'special'.");
-  }
-
-  characterType = characterType.toUpperCase();
-
-  if (
-    (characterType == "UPPERCASE") ||
-    (characterType == "LOWERCASE") ||
-    (characterType == "NUMERIC") ||
-    (characterType == "SPECIAL")) {
+ 
+  } else if (
+    (characterType == "uppercase") ||
+    (characterType == "lowercase") ||
+    (characterType == "numeric") ||
+    (characterType == "special")) {
     confirm("Awesome! Your password will use " + characterType + " characters. Click 'OK' to see your password");
   
     }
 
     function generatePassword(){
+      var setCharacters = {
+        lowercase: "abcdefghijklmnopqrstuvwxy",
+        uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        numeric: "0123456789",
+        special: " !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+      
+      };
+    var setCharacters = setCharacters[characterType.toLowerCase()] || setCharacters.lowercase;
     var newPassword = "";
     for (var i = 0; i < chooseLength; i++) {
-      newPassword += characterType.charAt(Math.floor(Math.random() * characterType.length));
+      newPassword += setCharacters.charAt(Math.floor(Math.random() * setCharacters.length));
     }
     return newPassword;
     }
@@ -77,6 +76,12 @@ function createPassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
+
+
+  generateBtn.addEventListener("click", );
+
+
+
   }
 
 
