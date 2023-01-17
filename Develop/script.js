@@ -3,12 +3,16 @@
 
 var generateBtn = document.querySelector("#generate");
 
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
+
 // Write password to the #password input
 function writePassword() {
 
-  // Logical Conditions for Character Length Inputs
+  // Prompt user to input character length
 
-  var chooseLength = window.prompt("How many characters? (Enter value between 8-128)");
+  var chooseLength = prompt("How many characters? (Enter value between 8-128)");
 
   if (chooseLength === null) {
     console.log(chooseLength);
@@ -31,7 +35,19 @@ function writePassword() {
 
   }
 
-  // Logical Conditions for Character Case Inputs
+  // Prompt user to select character type
+
+  var characterType = prompt("Enter the type of characters you want your password to have: (select one) uppercase, lowercase, numeric, special");
+
+  if (characterType === null) {
+
+    window.alert("Darn! You'll have to start from the beginning again");
+    return;
+  }
+
+  characterType = characterType.toUpperCase();
+
+ 
 
   var letterCasing = window.prompt("Do you want your password to have: uppercase, lowercase, or both? Enter 'U', 'L', or 'B'");
 
@@ -73,7 +89,24 @@ function writePassword() {
     window.alert("No worries. Your password won't have any numbers");
   }
 
-  // 
+  // Logical Conditions for Special Character Choices
+
+  var specialCharacters = window.prompt("Lastly, should your password include special characters, like: ()!@#$%^&' ? Enter 'Y' or 'N'");
+
+  if (specialCharacters === null) {
+    window.alert("Darn! You'll have to start from the beginning again");
+    return;
+  }
+
+  specialCharacters = specialCharacters.toUpperCase();
+
+  if (specialCharacters == "Y") {
+    window.alert("Nice! With special characters, your password will be much more secure");
+
+  } else if (specialCharacters == "N") {
+    window.alert("No worries. Your password won't have any special characters");
+  }
+
 
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -82,5 +115,4 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+
