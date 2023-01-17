@@ -52,7 +52,7 @@ function createPassword() {
     (characterType == "lowercase") ||
     (characterType == "numeric") ||
     (characterType == "special")) {
-    confirm("Awesome! Your password will use " + characterType + " characters. Click 'OK' to generate your password");
+    alert("Awesome! Your password will use " + characterType + " characters. Click 'OK' to generate your password");
 
   }
 
