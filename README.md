@@ -50,7 +50,7 @@ N/A
 
 Use the URL link provided below to access the web application with the password generator:
 
-URL:
+URL: https://chrisgom113.github.io/Be-Random-But-Secretive/
 
 Below are a few screenshots demonstrating the look and functionality of the web application:
 
