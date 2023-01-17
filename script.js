@@ -28,7 +28,7 @@ function createPassword() {
     createPassword();
 
   } else if (chooseLength >= 8 && chooseLength <= 128) {
-    window.alert("Thank you. Your password have be a length of " + chooseLength + " characters.");
+    window.alert("Thank you. Your password will be " + chooseLength + " characters.");
 
   } 
 
@@ -52,7 +52,7 @@ function createPassword() {
     (characterType == "lowercase") ||
     (characterType == "numeric") ||
     (characterType == "special")) {
-    confirm("Awesome! Your password will use " + characterType + " characters. Click 'OK' to get your password");
+    confirm("Awesome! Your password will use " + characterType + " characters. Click 'OK' to generate your password");
 
   }
 
